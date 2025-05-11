@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Exam Paper Generator</title>
+  <style>
+    :root {
+      --primary-blue: #1e3a8a;
+      --accent-blue: #2563eb;
+      --light-blue: #e0f2fe;
+      --background: #f8fafc;
+      --text-dark: #1f2937;
+      --text-light: #ffffff;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--background);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    nav {
+      background-color: var(--primary-blue);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 10px var(--shadow);
+    }
+
+    nav .brand {
+      font-size: 1.8em;
+      color: var(--text-light);
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    nav .nav-links {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #bae6fd;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 40px;
+      flex-wrap: wrap;
+    }
+
+    header .content {
+      max-width: 50%;
+      animation: fadeInLeft 1s ease;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: var(--primary-blue);
+    }
+
+    header p {
+      font-size: 1.1em;
+      color: #333;
+    }
+
+    header img {
+      max-width: 40%;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px var(--shadow);
+      animation: fadeInRight 1s ease;
+    }
+
+    .button {
+      margin-top: 20px;
+      padding: 15px 30px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      background-color: var(--accent-blue);
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: var(--primary-blue);
+    }
+
+    section {
+      padding: 60px 40px;
+    }
+
+    .section-title {
+      font-size: 2em;
+      color: var(--primary-blue);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .feature-card {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px var(--shadow);
+      text-align: center;
+      flex: 1;
+      min-width: 260px;
+      max-width: 300px;
+      animation: fadeInUp 1s ease;
+    }
+
+    .feature-card h4 {
+      color: var(--accent-blue);
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: var(--primary-blue);
+      color: var(--text-light);
+      padding: 20px 40px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+
+    @keyframes fadeInLeft {
+      from { opacity: 0; transform: translateX(-30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      header .content, header img {
+        max-width: 90%;
+      }
+
+      nav .nav-links {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="brand">ExamGenius: AI Exam Paper Generator</div>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="/upload-form">Get Started</a>
+    </div>
+  </nav>
+
+  <header>
+    <div class="content">
+      <h1>Generate Exam Papers with the Power of AI</h1>
+      <p>Upload study material and let our system generate relevant theoretical questions instantly. Simplify paper setting, save time, and enhance academic assessment.</p>
+      <button class="button" onclick="window.location.href='/upload-form'">Upload PDF & Generate</button>
+    </div>
+    <img src="/static/exam_ai.jpg" alt="AI Exam Illustration" />
+  </header>
+
+  <section id="features">
+    <h2 class="section-title">Key Features</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h4>Smart Question Generation</h4>
+        <p>Our AI extracts concepts and formulates high-quality theoretical questions.</p>
+      </div>
+      <div class="feature-card">
+        <h4>PDF Output</h4>
+        <p>Download neatly formatted question papers in PDF format instantly.</p>
+      </div>
+      <div class="feature-card">
+        <h4>Fast & Accurate</h4>
+        <p>Get your question paper within seconds—no manual editing needed.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About the Project</h2>
+    <p style="max-width: 800px; margin: auto; text-align: center;">
+      Built by a team of enthusiastic developers, ExamGenius is designed to reduce the burden of exam paper creation by leveraging natural language processing and AI. It helps educators focus more on teaching while we handle the tedious task of generating exam-ready content.
+    </p>
+  </section>
+
+  <footer id="contact">
+    <p>&copy; 2025 ExamGenius. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
