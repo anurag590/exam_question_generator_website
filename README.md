@@ -1,32 +1,25 @@
 # Exam Question Generator Website
 
 ## Overview
-The **Exam Question Generator** is a web-based tool that helps in generating exam questions from uploaded study material (such as PDFs). The tool analyzes the content and creates relevant questions that can be used in exams.
+The **Exam Question Generator** is a web application designed to help students and educators generate exam questions from uploaded study materials such as PDFs. By analyzing the content, the tool creates relevant questions automatically, saving time and effort in exam preparation.
 
 ## Features
 - Upload study materials in PDF format.
-- Automatically generate exam questions based on the content of the PDFs.
-- Display and download the generated questions in various formats.
-- User-friendly interface to interact with the application.
+- Automatically generate exam questions based on the content.
+- View and download generated questions in multiple formats.
+- User-friendly and responsive interface for smooth interaction.
 
-## Technologies Used
-- **Backend**: Python (Flask or Django)
-- **Frontend**: HTML, CSS, JavaScript
-- **Libraries/Frameworks**: 
-  - `Flask` (or `Django`) for web development.
-  - `PyPDF2` or other libraries for PDF content extraction.
-  - `Bootstrap` for responsive design.
-- **Deployment**: GitHub Pages, Heroku, or any other hosting services.
+## Technology Stack
+- **Backend:** Python (Flask or Django)
+- **Frontend:** HTML, CSS, JavaScript
+- **Libraries/Frameworks:**  
+  - `Flask` or `Django` for backend web development  
+  - `PyPDF2` (or similar) for PDF text extraction  
+  - `Bootstrap` for responsive UI design  
+- **Deployment:** GitHub Pages, Heroku, Render, or other hosting platforms
 
 ## Installation
 
 ### 1. Clone the Repository
-
-To get started, first clone the repository to your local machine:
-
 ```bash
 git clone https://github.com/anurag590/exam_question_generator_website.git
-
-#install dependency
-pip install -r requirements.txt
-
